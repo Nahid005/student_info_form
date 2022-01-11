@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.application-form-header {
+    text-align: center;
+}
+
+.application-form-submit-section table tr td {
+    border: 1px solid #ddd;
+    margin: 0;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.application-form-submit-section table tr td input {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.application-form-submit-section table tr td h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.application-form-submit-section table tr td h4 {
+    margin: 0;
+    text-align: center;
+}
+
+.application-form-submit-section table tr td .add {
+    border: 0;
+    width: 36px;
+    height: 24px;
+    background: #266318;
+    color: #fff;
+}
+
+.application-form-submit-section table tr td .remove {
+    border: 0;
+    width: 36px;
+    height: 24px;
+    background: #be2d08;
+    color: #fff;
+}
+
+table.table.service-section tr td input[type=checkbox] {
+    display: inline;
+    width: 50px;
+    margin-top: 10px;
+    height: 14px;
+}
+
+table.table.service-section tr td label {
+    margin: 0;
+}
+
+table.table.submit-section tr td input {
+    width: auto;
+    border: 0;
+}
+
+table.table.submit-section tr td {
+    border: 0;
+}
+
+table.table.submit-section tr td {
+    border: 0;
+    padding: 0;
+}
+
+table.table.submit-section tr td .submit {
+    background: #1a460f;
+    padding: 8px 20px;
+    color: #fff;
+}

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <section class="application-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="application-form-header">
+                        <h2> Applicant Assessment Form </h2>
+                        <p> (to be filled by the applicant) </p>
+                    </div>
+                    <div class="application-form-submit-section">
+                        <form action="#">
+                            <table class="table">
+                                <tbody>
+                                  <tr>
+                                    <td style="width: 10%;">
+                                        Name 
+                                    </td>
+                                    <td style="width: 40%;">
+                                        <input type="text" name="Name" id="Name">
+                                    </td>
+                                    <td style="width: 10%;">
+                                        Phone No.
+                                    </td>
+                                    <td style="width: 40%;">
+                                        <input type="number" name="Number" id="Number">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style="width: 10%;"> Address </td>
+                                    <td style="width: 40%;">
+                                        <input type="text" name="address" id="address">
+                                    </td>
+                                    <td style="width: 10%;">Email </td>
+                                    <td style="width: 40%;">
+                                        <input type="email" name="email" id="email">
+                                    </td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                            <table class="table service-section">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20%;"> 
+                                            <label for="Service">Service</label>
+                                        </td>
+                                        <td style="width: 20%;">
+                                            <label for="Immigration"> Immigration</label>
+                                            <input type="checkbox" name="Immigration" id="Immigration">
+                                        </td>
+                                        <td style="width: 20%;">
+                                            <label for="Student"> Student </label>
+                                            <input type="checkbox" name="Student" id="Student">
+                                        </td>
+                                        <td style="width: 20%;">
+                                            <label for="Schooling"> Schooling </label>
+                                            <input type="checkbox" name="Schooling" id="Schooling">
+                                        </td>
+                                        <td style="width: 20%;">
+                                            <label for="Visit"> Visit </label>
+                                            <input type="checkbox" name="Visit" id="Visit">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h2>Proposed Country : Canada</h2>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100%;">
+                                            <h4> Educational History </h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table" id="theTable">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 10%;">
+                                            Sl No.
+                                        </td>
+                                        <td style="width: 50%;">
+                                            Name Of Degree
+                                        </td>
+                                        <td style="width: 10%;">
+                                            Result
+                                        </td>
+                                        <td style="width: 20%;">
+                                            Passing Year
+                                        </td>
+                                        <td style="width: 10%;">
+                                            <button class="add" onclick="addRow();"> <i class="fa fa-plus" aria-hidden="true"></i> </button>
+                                        </td>
+                                    </tr>
+                                    <tr id="templateRow" style="display:none">
+                                        <td style="width: 10%;">{id}</td>
+                                        <td style="width: 50%;"><input type="text"></td>
+                                        <td style="width: 10%;"><input type="text"></td>
+                                        <td style="width: 20%;"><input type="text"></td>
+                                        <td style="width: 10%;">
+                                            <button class="remove" type="button" onclick="deleteRow(this);"> <i class="fa fa-minus" aria-hidden="true"></i> </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 40%;"> assessment factors </td>
+                                        <td style="width: 60%;">
+                                            Details
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Experience <br> (Job Sector, Designation, Duration) </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Age/Date of Birth </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Applicant’s IELTS </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Spouse Education </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Spouse IELTS </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Relatives in Canada </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Applicant’s Father Occupation </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Number of Children </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%;"> Travel History (last 10 years) </td>
+                                        <td style="width: 60%;">
+                                            <input type="text" name="text" id="text">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table submit-section" >
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 50%;"> 
+                                            <input class="submit" type="button" value="Submit">
+                                        </td>
+                                        <td style="width: 50%; text-align: right;">
+                                            <span>Date : </span> <input type="date" name="date" id="date">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<script>
+    var maxID = 0;
+    function getTemplateRow() {
+    var x = document.getElementById("templateRow").cloneNode(true);
+    x.id = "";
+    x.style.display = "";
+    x.innerHTML = x.innerHTML.replace(/{id}/, ++maxID);
+    return x;
+    }
+    function addRow() {
+    var t = document.getElementById("theTable");
+    var rows = t.getElementsByTagName("tr");
+    var r = rows[rows.length - 1];
+    r.parentNode.insertBefore(getTemplateRow(), r);
+    }
+
+    function deleteRow(el) {
+        // while there are parents, keep going until reach TR 
+        while (el.parentNode && el.tagName.toLowerCase() != 'tr') {
+            el = el.parentNode;
+        }
+
+        // If el has a parentNode it must be a TR, so delete it
+        // Don't delte if only 3 rows left in table
+        if (el.parentNode && el.parentNode.rows.length > 3) {
+            el.parentNode.removeChild(el);
+    }
+}
+</script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
